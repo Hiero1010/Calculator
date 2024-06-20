@@ -1,1 +1,15 @@
-#testing it
+#CALCULATOR
+def add(n1,n2):
+    return float(n1)+float(n2)
+def sub(n1,n2):
+    return float(n1)-float(n2)
+def div(n1,n2):
+    res = float(float(n1)/float(n2))
+    return res
+def times(n1,n2):
+    return float(n1)*float(n2)
+calculation = []
+calculation1 = input("Welcome to our Calculator, please input a calculation you want to do\n Ex : 1 + 2 * 3 - 4 /2\n Please use the operations(+,-,*,/) and use a space between numbers and operations\n")
+calculation = calculation1.split()
+if len(calculation) == 1:
+    print("Error, Please add a space between a number and an operation\n Correct : 1 + 2 * 3 \n Incorrect : 1+2*3")
