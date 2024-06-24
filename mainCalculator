@@ -25,3 +25,17 @@ while "*" in calculation or "/" in calculation:
             calculation.pop(i-1)
             calculation.pop(i)
             break
+while len(calculation) != 1:
+    for i in range(len(calculation)):
+        if calculation[i] == "+":
+            calculation[i] = add(calculation[i - 1], calculation[i + 1])
+            calculation.pop(i-1)
+            calculation.pop(i)
+            break
+        elif calculation[i] == "-":
+            calculation[i] = sub(calculation[i - 1], calculation[i + 1])
+            calculation.pop(i-1)
+            calculation.pop(i)
+            break
+for i in calculation:
+    print(i)
