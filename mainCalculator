@@ -38,4 +38,4 @@ while len(calculation) != 1:
             calculation.pop(i)
             break
 for i in calculation:
-    print(i)
+    print("The answer is : " + i)
