@@ -13,3 +13,15 @@ calculation1 = input("Welcome to our Calculator, please input a calculation you 
 calculation = calculation1.split()
 if len(calculation) == 1:
     print("Error, Please add a space between a number and an operation\n Correct : 1 + 2 * 3 \n Incorrect : 1+2*3")
+while "*" in calculation or "/" in calculation:
+    for i in range(len(calculation)):
+        if calculation[i] == "*":
+            calculation[i] = times(calculation[i-1],calculation[i+1])
+            calculation.pop(i-1)
+            calculation.pop(i)
+            break
+        elif calculation[i] == "/":
+            calculation[i] = div(calculation[i-1],calculation[i+1])
+            calculation.pop(i-1)
+            calculation.pop(i)
+            break
